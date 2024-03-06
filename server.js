@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 //conect db
-mongoose.connect("mongodb://localhost:27017/Gas").then(()=>{
+mongoose.connect("mongodb+srv://jeeylove922:sd7FyDh5oDokpA2u@cluster0.66xbiet.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
     console.log("Database has been connect successfully")
 }).catch((error)=> console.log(error))
 
@@ -36,6 +36,6 @@ app.use(ParchaseRout)
 app.use("/allrepot", express.static("reports"))
 
 //port number web
-app.listen(5000, () =>{
+app.listen(10000, () =>{
     console.log("server is runing port 5000");
 })
